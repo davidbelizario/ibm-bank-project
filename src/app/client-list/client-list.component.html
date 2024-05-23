@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <img src="assets/ibm-logo.png" alt="IBM Logo" class="ibm-logo">
+    <span class="toolbar-title mat-primary">Gerenciador de Clientes</span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="secondary" (click)="addClient()">
+      <span style="color: #481797;">Cadastrar Novo Cliente</span>
+  </button>
+  </mat-toolbar>
+  
+  <div class="client-list">
+    <mat-card class="mat-card-header-text mat-primary" *ngFor="let client of clients">
+        <div class="card-title">
+            <mat-card-title class="primary-text">{{ client.name }}</mat-card-title>
+          </div>
+      <mat-card-content class="mat-primary">
+        <p>Idade: {{ client.age }}</p>
+        <p>Email: {{ client.email }}</p>
+        <p>Número da Conta: {{ client.account }}</p>
+        <p>Saldo: {{ client.balance }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="viewClient(client.account)">
+            Acessar Conta
+        </button>
+        <div class="icon-buttons">
+        <button mat-button color="primary" (click)="editClient(client.account)">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

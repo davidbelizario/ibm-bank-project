@@ -1,0 +1,92 @@
+
+.client-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px; 
+  }
+  
+  .mat-card {
+    cursor: pointer;
+    width: 300px;
+    width: calc(33.33% - 16px); 
+    margin-bottom: 16px; 
+  }
+
+  .mat-card-title.primary-text {
+    color: var(--md-theme-default-primary); /* Cor primária do tema */
+  }
+  
+
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px; 
+
+  }
+
+  .primary-text {
+    color: #3533b1c7; /* Exemplo de cor primária do tema */
+}
+  
+
+
+.toolbar-title {
+    flex: 1; /* Faz com que o título ocupe o espaço restante */
+    text-align: center; /* Centraliza o texto */
+}
+      
+
+  .mat-card-title {
+    margin: 16px 0;
+  }
+
+  .card-title {
+    margin-left: 16px; 
+}
+
+  
+
+.ibm-text {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    margin-right: 16px; /* Espaçamento entre o texto e o título */
+  }
+
+  .ibm-logo {
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 16px; /* Espaçamento entre o logotipo e o título */
+    background-color:  #5319b1; /* Garantir que o fundo da imagem seja transparente */
+
+  }
+
+  .icon-buttons {
+    display: flex;
+    gap: 8px; /* Ajuste o valor conforme necessário */
+  }
+  
+  .mat-icon-button {
+    padding: 0; /* Remove padding extra dos botões de ícone */
+    min-width: auto; /* Garante que os botões ocupem o mínimo de espaço */
+  }
+
+  .mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .background-message {
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para realmente centralizar */
+    max-height: calc(100vh - 60px); /* Ajusta a altura máxima para deixar espaço para a barra de ferramentas */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que o fundo apareça acima de outros elementos */
+  }
+  

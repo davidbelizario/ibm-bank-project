@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    <span class="toolbar-title">Transferir Dinheiro</span>
+  </mat-toolbar>
+  
+  <div class="form-container">
+    <h2>Transferência Bancária</h2>
+    <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-field">
+        <mat-label>Conta de Destino</mat-label>
+        <input matInput formControlName="payee" placeholder="Conta de Destino" required>
+        <mat-error *ngIf="transactionForm.get('payee')?.hasError('required')">Conta de Destino é obrigatória</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Valor</mat-label>
+        <input matInput type="Valor" formControlName="value" placeholder="Valor da Transferência" required>
+        <mat-error *ngIf="transactionForm.get('value')?.hasError('required')">Valor é obrigatório</mat-error>
+        <mat-error *ngIf="transactionForm.get('value')?.hasError('min')">Valor deve ser maior que 0</mat-error>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Transferir</button>
+        <button mat-button color="warn" (click)="goBack()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  

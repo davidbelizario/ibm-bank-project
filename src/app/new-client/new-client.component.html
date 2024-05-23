@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    <span class="toolbar-title">Cadastro de Novo Cliente</span>
+  </mat-toolbar>
+  
+  <div class="form-container">
+    <h2>Cadastrar Novo Cliente</h2>
+    <form [formGroup]="newClientForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-field">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name" placeholder="Nome" required>
+        <mat-error *ngIf="newClientForm.get('name')?.hasError('required')">Nome é obrigatório</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Idade</mat-label>
+        <input matInput type="number" formControlName="age" placeholder="Idade" required>
+        <mat-error *ngIf="newClientForm.get('age')?.hasError('required')">Idade é obrigatória</mat-error>
+        <mat-error *ngIf="newClientForm.get('age')?.hasError('min')">Idade deve ser maior que 12</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Endereço</mat-label>
+        <input matInput formControlName="address" placeholder="Endereço" required>
+        <mat-error *ngIf="newClientForm.get('address')?.hasError('required')">Endereço é obrigatório</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Email" required>
+        <mat-error *ngIf="newClientForm.get('email')?.hasError('required')">Email é obrigatório</mat-error>
+        <mat-error *ngIf="newClientForm.get('email')?.hasError('email')">Email inválido</mat-error>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+        <button mat-button color="warn" (click)="goBack()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  

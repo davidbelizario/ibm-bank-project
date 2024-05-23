@@ -1,0 +1,107 @@
+.client-details-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa a altura total da tela */
+  }
+  
+  .client-details {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .client-info {
+    width: 100%;
+  }
+  
+  .transfer-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+  }
+  
+  .transfer-button {
+    margin-left: 10px; /* Adiciona um espaçamento entre o saldo e o botão */
+  }
+  
+  
+  .transaction-history {
+    padding-top: 20px;
+    flex: 1; /* Ocupa todo o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px; /* Espaçamento horizontal de 16 pixels */
+
+  }
+  
+  .transaction-item {
+    margin-bottom: 10px;
+  }
+  
+  .toolbar-title {
+    flex: 1; 
+  }
+  
+  .balance-value {
+    margin-right: 30px; /* Ajuste o valor conforme necessário */
+  }
+
+  .pagination-controls button.mat-paginator-navigation-previous {
+    
+    color: red; 
+  }
+  
+  .pagination-controls button.mat-paginator-navigation-next {
+    color: blue; 
+  }
+
+.positive-value {
+    color: green;
+  }
+  
+  .negative-value {
+    color: red;
+  }
+
+  .background-message {
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para realmente centralizar */
+    max-height: calc(100vh - 60px); /* Ajusta a altura máxima para deixar espaço para a barra de ferramentas */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que o fundo apareça acima de outros elementos */
+  }
+  
+  .message-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6133ac;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .client-name-account {
+    margin-right: 30px; /* Ajuste o valor conforme necessário */
+
+  }
+
+  .client-number-account{
+    margin-right: 30px; /* Ajuste o valor conforme necessário */
+  }
+  
+  
+  
+  
+  
+
+
+  
+  
